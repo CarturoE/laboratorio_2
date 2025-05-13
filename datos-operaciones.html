@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora con prompt</title>
+</head>
+<body>
+    <script>
+        while (true) {
+            // Pedir números
+            let num1 = parseFloat(prompt("Por favor, ingresa tu primer número:"));
+            let num2 = parseFloat(prompt("Por favor, ingresa tu segundo número:"));
+
+            // Pedir operación
+            let operacion = prompt("Ingresa la operación que deseas realizar (+, -, *, /) o escribe 'salir' para terminar:");
+
+            // Verificar si quiere salir
+            if (operacion.toLowerCase() === "salir") {
+                alert("Has decidido salir. ¡Gracias por usar la calculadora!");
+                break;
+            }
+
+            let resultado;
+            let mensaje = "";
+
+            // Realizar operación
+            if (operacion === "+") {
+                resultado = num1 + num2;
+                mensaje = "Resultado de la suma: " + resultado;
+            } else if (operacion === "-") {
+                resultado = num1 - num2;
+                mensaje = "Resultado de la resta: " + resultado;
+            } else if (operacion === "*") {
+                resultado = num1 * num2;
+                mensaje = "Resultado de la multiplicación: " + resultado;
+            } else if (operacion === "/") {
+                if (num2 === 0) {
+                    mensaje = "Error: No se puede dividir entre cero.";
+                } else {
+                    resultado = num1 / num2;
+                    mensaje = "Resultado de la división: " + resultado;
+                }
+            } else {
+                mensaje = "Operación no válida. Usa +, -, *, / o escribe 'salir'.";
+            }
+
+            alert(mensaje);
+        }
+    </script>
+</body>
+</html>

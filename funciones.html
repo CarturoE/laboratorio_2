@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCIONES PARA REALIZAR OPERACIONES</title>
+</head>
+<body>
+<Script>
+function realizarOperacion() {
+   
+    document.write("No olvides Escojer la operacion que vas a realizar: " + "</p>");
+    let num1=500;
+    let num2=100;
+    let operacion="multiplicacion";//ESCOJO AQUI LA OPERACION QUE NECESIT0.
+    
+    if(operacion === "suma"){
+        return num1+num2;  
+    }else if(operacion === "resta"){
+        return num1-num2;
+    }else if(operacion === "multiplicacion"){
+        return num1*num2;
+    }else if(operacion === "division"){
+        return num1/num2;
+    }else
+    return "Operacion NO valida";
+}
+    document.write("El resultado es : " + realizarOperacion());
+    
+</Script>
+
+
+</body>
+</html>
